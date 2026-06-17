@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F7FFF9">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="QUẢN LÝ\nTHU CHI CÁ NHÂN"
+        android:textColor="#1B5E20"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:text="💰"
+        android:textSize="70sp"
+        android:gravity="center"
+        android:background="#E0F2F1"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Theo dõi thu nhập, kiểm soát chi tiêu và quản lý tài chính cá nhân dễ dàng hơn."
+        android:textSize="16sp"
+        android:textColor="#555555"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/btnBatDau"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="BẮT ĐẦU"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#26A69A" />
+
+</LinearLayout>

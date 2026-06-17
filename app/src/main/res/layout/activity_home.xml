@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sổ thu chi cá nhân"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtChiTieu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Chi tiêu"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FF7F8A"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/txtThuNhap"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Thu nhập"
+                android:textSize="22sp"
+                android:textColor="#999999"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF7F8A" />
+
+        <TextView
+            android:id="@+id/txtNgay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="📅 13/06/2026"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="25dp"
+            android:background="#FFF1ED"
+            android:paddingStart="15dp"/>
+
+        <EditText
+            android:id="@+id/edtGhiChu"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Thêm ghi chú"
+            android:textSize="18sp"
+            android:background="#FFF1ED"
+            android:layout_marginTop="15dp"
+            android:paddingStart="15dp" />
+
+        <EditText
+            android:id="@+id/edtSoTien"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="0"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:background="#FFF1ED"
+            android:layout_marginTop="15dp"
+            android:paddingStart="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Danh mục"
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="12dp" />
+
+        <GridLayout
+            android:id="@+id/gridDanhMuc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+        </GridLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNhapKhoan"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="NHẬP KHOẢN TIỀN CHI"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="@drawable/button_pink"
+            android:layout_marginTop="30dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLichSu"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="LỊCH SỬ GIAO DỊCH"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:background="@drawable/button_pink"
+            android:layout_marginTop="25dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnThongKe"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="XEM THỐNG KÊ"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_pink"/>
+
+    </LinearLayout>
+</ScrollView>
