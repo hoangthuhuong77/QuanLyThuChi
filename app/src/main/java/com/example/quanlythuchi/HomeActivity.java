@@ -6,12 +6,11 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
@@ -21,7 +20,7 @@ public class HomeActivity extends AppCompatActivity {
 
     TextView txtChiTieu, txtThuNhap, txtNgay;
     EditText edtGhiChu, edtSoTien;
-    Button btnNhapKhoan, btnLichSu, btnThongKe;
+    LinearLayout btnNhapKhoan, btnLichSu, btnThongKe;
     GridLayout gridDanhMuc;
 
     DatabaseHelper databaseHelper;
@@ -119,8 +118,6 @@ public class HomeActivity extends AppCompatActivity {
         txtThuNhap.setTextColor(
                 getColor(android.R.color.darker_gray));
 
-        btnNhapKhoan.setText("NHẬP KHOẢN TIỀN CHI");
-
         hienDanhMuc(danhMucChi);
     }
 
@@ -133,8 +130,6 @@ public class HomeActivity extends AppCompatActivity {
 
         txtChiTieu.setTextColor(
                 getColor(android.R.color.darker_gray));
-
-        btnNhapKhoan.setText("NHẬP KHOẢN TIỀN THU");
 
         hienDanhMuc(danhMucThu);
     }

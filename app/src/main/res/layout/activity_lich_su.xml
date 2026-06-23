@@ -3,21 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF">
+    android:background="#FFF5F7">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:text="Lịch sử giao dịch"
-        android:textSize="28sp"
+        android:text="📋 LỊCH SỬ GIAO DỊCH"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#444444"
+        android:textColor="#FF7F8A"
         android:gravity="center_vertical"
-        android:paddingStart="20dp" />
+        android:paddingStart="20dp"/>
 
     <ListView
         android:id="@+id/listLichSu"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:padding="10dp"/>
 
 </LinearLayout>

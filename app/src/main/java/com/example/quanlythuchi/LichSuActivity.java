@@ -2,7 +2,6 @@ package com.example.quanlythuchi;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +17,7 @@ public class LichSuActivity extends AppCompatActivity {
     ArrayList<String> danhSachGiaoDich;
     ArrayList<Integer> dsId;
 
-    ArrayAdapter<String> adapter;
+    GiaoDichAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +35,8 @@ public class LichSuActivity extends AppCompatActivity {
                 databaseHelper.layTatCaId();
 
         adapter =
-                new ArrayAdapter<>(
+                new GiaoDichAdapter(
                         this,
-                        android.R.layout.simple_list_item_1,
                         danhSachGiaoDich
                 );
 
@@ -71,7 +69,8 @@ public class LichSuActivity extends AppCompatActivity {
             return true;
         });
     }
-    private void xoaGiaoDich(int position){
+
+    private void xoaGiaoDich(int position) {
 
         int idGiaoDich = dsId.get(position);
 
@@ -82,7 +81,8 @@ public class LichSuActivity extends AppCompatActivity {
 
         adapter.notifyDataSetChanged();
     }
-    private void suaGiaoDich(int position){
+
+    private void suaGiaoDich(int position) {
 
         android.widget.EditText edt =
                 new android.widget.EditText(this);
@@ -98,7 +98,7 @@ public class LichSuActivity extends AppCompatActivity {
                             String soTienMoi =
                                     edt.getText().toString();
 
-                            if(!soTienMoi.isEmpty()){
+                            if (!soTienMoi.isEmpty()) {
 
                                 int idGiaoDich =
                                         dsId.get(position);

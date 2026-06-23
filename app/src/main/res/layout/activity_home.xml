@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sổ thu chi cá nhân"
+            android:text="Nhập Giao Dịch"
             android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="#444444"
@@ -100,37 +100,73 @@
             android:columnCount="3">
 
         </GridLayout>
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnNhapKhoan"
+        <LinearLayout
+            android:id="@+id/bottomMenu"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="NHẬP KHOẢN TIỀN CHI"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:background="@drawable/button_pink"
-            android:layout_marginTop="30dp" />
+            android:layout_height="80dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnLichSu"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:text="LỊCH SỬ GIAO DỊCH"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:background="@drawable/button_pink"
-            android:layout_marginTop="25dp" />
+            <LinearLayout
+                android:id="@+id/btnNhapKhoan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnThongKe"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:text="XEM THỐNG KÊ"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/button_pink"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="➕"
+                    android:textSize="28sp" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nhập" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnLichSu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lịch sử" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnThongKe"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📊"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Báo cáo" />
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
