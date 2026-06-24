@@ -154,4 +154,59 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return new int[]{tongThu, tongChi};
     }
+    public Cursor layTatCaGiaoDichCursor() {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        return db.rawQuery(
+                "SELECT * FROM GiaoDich ORDER BY id DESC",
+                null
+        );
+    }
+
+    public Cursor layGiaoDichTheoId(int id) {
+
+        SQLiteDatabase db =
+                this.getReadableDatabase();
+
+        return db.rawQuery(
+                "SELECT * FROM GiaoDich WHERE id=?",
+                new String[]{
+                        String.valueOf(id)
+                }
+        );
+    }
+
+    public void suaToanBoGiaoDich(
+            int id,
+            String ghiChu,
+            int soTien,
+            String loai,
+            String danhMuc,
+            String ngay
+    ) {
+
+        SQLiteDatabase db =
+                this.getWritableDatabase();
+
+        ContentValues values =
+                new ContentValues();
+
+        values.put("ghiChu", ghiChu);
+        values.put("soTien", soTien);
+        values.put("loai", loai);
+        values.put("danhMuc", danhMuc);
+        values.put("ngay", ngay);
+
+        db.update(
+                "GiaoDich",
+                values,
+                "id=?",
+                new String[]{
+                        String.valueOf(id)
+                }
+        );
+
+        db.close();
+    }
 }

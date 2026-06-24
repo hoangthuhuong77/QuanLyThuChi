@@ -3,17 +3,55 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:background="@drawable/card_transaction"
+    android:layout_margin="10dp"
     android:orientation="vertical"
-    android:padding="15dp">
+    android:padding="15dp"
+    android:background="@drawable/card_transaction">
 
-    <TextView
-        android:id="@+id/txtItem"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#444444"
-        android:textSize="16sp"
-        android:lineSpacingExtra="4dp"/>
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtNgay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📅 24/06/2026"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnSua"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_edit" />
+
+        <ImageButton
+            android:id="@+id/btnXoa"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_delete" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtDanhMuc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="💰 Quần áo"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/txtSoTien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="💵 200.000 đ"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

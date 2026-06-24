@@ -37,82 +37,31 @@ public class LichSuActivity extends AppCompatActivity {
         adapter =
                 new GiaoDichAdapter(
                         this,
-                        danhSachGiaoDich
+                        danhSachGiaoDich,
+                        dsId,
+                        databaseHelper
                 );
 
         listLichSu.setAdapter(adapter);
 
-        listLichSu.setOnItemLongClickListener((parent, view, position, id) -> {
-
-            String[] luaChon = {
-                    "Sửa giao dịch",
-                    "Xóa giao dịch"
-            };
-
-            new AlertDialog.Builder(this)
-                    .setTitle("Chọn thao tác")
-                    .setItems(luaChon, (dialog, which) -> {
-
-                        if (which == 0) {
-
-                            suaGiaoDich(position);
-
-                        } else {
-
-                            xoaGiaoDich(position);
-
-                        }
-
-                    })
-                    .show();
-
-            return true;
-        });
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-    private void xoaGiaoDich(int position) {
+        if (databaseHelper != null && adapter != null) {
+            danhSachGiaoDich.clear();
+            dsId.clear();
 
-        int idGiaoDich = dsId.get(position);
+            danhSachGiaoDich.addAll(
+                    databaseHelper.layTatCaGiaoDich()
+            );
 
-        databaseHelper.xoaGiaoDich(idGiaoDich);
+            dsId.addAll(
+                    databaseHelper.layTatCaId()
+            );
 
-        danhSachGiaoDich.remove(position);
-        dsId.remove(position);
-
-        adapter.notifyDataSetChanged();
-    }
-
-    private void suaGiaoDich(int position) {
-
-        android.widget.EditText edt =
-                new android.widget.EditText(this);
-
-        edt.setHint("Nhập số tiền mới");
-
-        new AlertDialog.Builder(this)
-                .setTitle("Sửa giao dịch")
-                .setView(edt)
-                .setPositiveButton("Lưu",
-                        (dialog, which) -> {
-
-                            String soTienMoi =
-                                    edt.getText().toString();
-
-                            if (!soTienMoi.isEmpty()) {
-
-                                int idGiaoDich =
-                                        dsId.get(position);
-
-                                databaseHelper.suaGiaoDich(
-                                        idGiaoDich,
-                                        "Đã chỉnh sửa",
-                                        Integer.parseInt(soTienMoi)
-                                );
-
-                                recreate();
-                            }
-                        })
-                .setNegativeButton("Hủy", null)
-                .show();
+            adapter.notifyDataSetChanged();
+        }
     }
 }
