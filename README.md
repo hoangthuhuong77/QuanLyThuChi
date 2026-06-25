@@ -179,9 +179,13 @@ QuanLyThuChi
 ## 8. Tác giả
 
 Họ tên: Hoàng Thu Hương
-
 Mã sinh viên: 10123178
-
 Lớp:12523W.2
+
+Họ tên: Phạm Văn Hiệu
+Mã sinh viên: 10123135
+Lớp: 12523W.2
+
+
 
 
